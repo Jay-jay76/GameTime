@@ -1,0 +1,58 @@
+# GameTime
+from time import sleep
+
+
+BOB = input('what is your name?')
+
+# Ghost game
+from random import randint
+print('ghost game')
+feeling_brave = True
+score = 0
+while feeling_brave:
+    ghost_door = randint(1, 5)
+    print('Three doors ahead...')
+    print('A ghost behind one.')
+    print('Which door do you open?')
+    door = input('1, 2, 3, 4 or 5')
+    door_num = int(door)
+    if door_num == ghost_door:
+        print('GHOST!')
+        feeling_brave = False
+        print('1')
+        sleep(1.5)
+        print('2')
+        sleep(1.5)
+        print('3')
+        sleep(1.5)
+        print('you have been invested', BOB)
+    
+        
+    else:
+        print('no ghost!')
+        print('you enter the next room.')
+        score = score + 1
+score = score + 1   
+print('Run away!')
+print('Game over! you scored', score)
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
