@@ -1,0 +1,65 @@
+# GameTime
+'''
+#This is a simple game that generates a number between 1 and 100
+#User makes guesses until they guess correctly.
+'''
+
+#This is needed to generate random numbers
+import random
+
+
+want_to_play = True
+
+while want_to_play:
+
+    #Randomly choose my mystery number between 1 and 100
+    mystery_number = random.randrange(100)
+
+
+    #number_guessed is a Boolean variable to indicator
+    #if our number has been guessed or not
+    number_guessed = False
+
+
+    #If number hasn't been guessed, keep asking
+    while not number_guessed:
+        print("Guess a number between 1 and 100.")
+        guess = float(input("?"))
+
+        if guess < mystery_number:
+            print("Too low.\n")
+        elif guess > mystery_number:
+            print("Too high.\n")
+        elif guess == mystery_number:
+            print("Well done! You guessed it!\n")
+            number_guessed = True
+        else:
+            print("I did not understand your answer.\n")
+
+
+    #Tracks whether user has answered the "play again" question
+    answered = False
+    
+
+    #see if user wants to play again
+    while not answered:
+        print("Would you like to play again?")
+        play = input("y/n ")
+
+        #if no, quit the game
+        if play == "n" or play == "N":
+            print("I hope you've enjoyed playing!")
+            want_to_play = False
+            answered = True
+
+        #if yes, generate a new number, start again
+        elif play == "y" or play == "Y":
+            print("Fantastic! I'll pick a new number for you to guess.")
+            print("\n")
+            answered = True
+
+        #if anything else, repeat question
+        else:
+            print("I did not understand your input.")
+            print("Please type either \"y\" or \"n\".")
+            print("\n")
