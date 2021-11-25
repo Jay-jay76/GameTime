@@ -1,11 +1,16 @@
 you need to down load python to play https://www.python.org/downloads/
 
-download the files 
+once you have downloaded python 
 
-then right clik on file and press more options
+download the game file(s)
 
-then press edit with python
+then right click on file and press more options
 
-then press run
+then press edit with idle 
+
+then press run 
+
+then press OK 
+
  then play
  
